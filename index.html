@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Results summary component</title>
+
+
+  <style>
+    @font-face {
+      font-family: "example";
+      src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "example", sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #home {
+      height: 75%;
+      width: 50%;
+      display: flex;
+      border-radius: 50px;
+      background-color: hsl(0, 0%, 100%);
+      box-shadow: 0 50px 70px 0 rgba(17, 12, 46, 0.15);
+    }
+
+    #child1,
+    #child2 {
+      width: 50%;
+    }
+
+    #child1 {
+      background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+      border-radius: 50px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .headtext {
+      color: hsl(241, 100%, 89%);
+      padding: 30px;
+    }
+
+    #circle-Container {
+      height: 175px;
+      width: 175px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      text-align: center;
+      background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0.1));
+    }
+
+    #circle-Container p {
+      color: hsl(241, 100%, 89%);
+      font-weight: 500;
+      font-size: 17px;
+    }
+
+    #circle-Container p span {
+      color: hsl(0, 0%, 100%);
+      font-size: 60px;
+      font-weight: 700;
+    }
+
+    .midtext {
+      padding: 20px;
+      color: hsl(241, 100%, 89%);
+    }
+
+    .para {
+      font-size: 18px;
+      color: hsl(241, 100%, 89%);
+      width: 25ch;
+      display: inline-block;
+    }
+
+    #child2 {
+      border-radius: 0 50px 50px 0;
+      padding: 10px;
+    }
+
+    #child2 h2 {
+      color: hsl(224, 30%, 27%);
+      margin-top: 10px;
+      padding: 20px;
+    }
+
+    .tab {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: calc(100% - 40px);
+      height: 50px;
+      margin: 10px 10px 10px 20px;
+      border-radius: 5px;
+    }
+
+    .tab1 {
+      background-color: hsl(0, 100%, 67%, 0.1);
+    }
+
+    .tab2 {
+      background-color: hsl(39, 100%, 56%, 0.1);
+    }
+
+    .tab3 {
+      background-color: hsl(166, 100%, 37%, 0.1);
+    }
+
+    .tab4 {
+      background-color: hsl(234, 85%, 45%, 0.1);
+    }
+
+    .tab1 .first-child {
+      color: hsl(0, 100%, 67%);
+    }
+
+    .tab2 .first-child {
+      color: hsl(39, 100%, 56%);
+    }
+
+    .tab3 .first-child {
+      color: hsl(166, 100%, 37%);
+    }
+
+    .tab4 .first-child {
+      color: hsl(234, 85%, 45%);
+    }
+
+    .tab .first-child {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+    }
+
+    .tab .first-child img {
+      padding: 0 10px;
+    }
+
+    .tab .last-child {
+      padding-right: 10px;
+      font-weight: 700;
+      color: hsl(241, 100%, 89%);
+    }
+
+    .tab .last-child span {
+      color: hsl(224, 30%, 27%);
+    }
+
+    #child2 button {
+      border: none;
+      outline: none;
+      width: calc(100% - 40px);
+      color: hsl(0, 0%, 100%);
+      background-color: hsl(224, 30%, 27%);
+      margin: 20px 0 0 20px;
+      padding: 15px 0;
+      border-radius: 30px;
+      font-weight: 500;
+      font-size: 17px;
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    #child2 button:hover, #child2 button:focus {
+      background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    }
+
+    @media (max-width: 375px) {
+      #home {
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      #child1,
+      #child2 {
+        width: 100%;
+      }
+
+      #child1 {
+        border-radius: 0 0 50px 50px;
+        max-height: 50%;
+      }
+
+      .headtext {
+        padding: 15px;
+        font-weight: 700;
+        font-size: 17px;
+      }
+
+      #circle-Container {
+        height: 100px;
+        width: 100px;
+      }
+
+      #circle-Container p {
+        font-size: 15px;
+        font-weight: normal;
+      }
+
+      #circle-Container p span {
+        font-size: 40px;
+      }
+
+      .midtext {
+        padding: 10px;
+      }
+
+      .para {
+        width: 30ch;
+        font-size: 16px;
+        text-align: center;
+      }
+
+      #child2 {
+        height: 50%;
+      }
+
+      #child2 h2 {
+        margin-top: 0;
+        padding: 10px 0 10px 20px;
+      }
+
+      .tab {
+        height: 45px;
+        margin: 10px 0 10px 20px;
+      }
+
+      #child2 button {
+        padding: 10px;
+        margin-top: 5px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <section id="home">
+    <section id="child1">
+      <article>
+        <h2 class="headtext">Your Result</h2>
+        <div id="circle-Container">
+          <p><span>76</span><br>of 100</p>
+        </div>
+        <h2 class="midtext">Great</h2>
+        <p class="para">You scored higher than 65% of the people who have taken these tests.</p>
+      </article>
+    </section>
+    <section id="child2">
+      <h2>Summary</h2>
+      <aside>
+        <div class="tab tab1">
+          <p class="first-child"><img src="./assets/images/icon-reaction.svg" alt="Reaction"> Reaction</p>
+          <p class="last-child"><span>80</span>&ThickSpace;/ 100</p>
+        </div>
+        <div class="tab tab2">
+          <p class="first-child"><img src="./assets/images/icon-memory.svg" alt="Reaction"> Memory</p>
+          <p class="last-child"><span>92</span>&ThickSpace;/ 100</p>
+        </div>
+        <div class="tab tab3">
+          <p class="first-child"><img src="./assets/images/icon-verbal.svg" alt="Reaction"> Verbal</p>
+          <p class="last-child"><span>61</span>&ThickSpace;/ 100</p>
+        </div>
+        <div class="tab tab4">
+          <p class="first-child"><img src="./assets/images/icon-visual.svg" alt="Reaction"> Visual</p>
+          <p class="last-child"><span>72</span>&ThickSpace;/ 100</p>
+        </div>
+      </aside>
+      <button>Continue</button>
+    </section>
+  </section>
+
+</body>
+
+</html>
