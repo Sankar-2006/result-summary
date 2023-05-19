@@ -42,7 +42,8 @@ I didn't use any specific Websites for doing this project. I've just used browse
 
 - Website - [My Portfolio](https://sankar-2006.github.io)
 - Frontend Mentor - [@Sankar-2006](https://www.frontendmentor.io/profile/Sankar-2006)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+
+Check my github profile for more links
 
 ## Know this
 
